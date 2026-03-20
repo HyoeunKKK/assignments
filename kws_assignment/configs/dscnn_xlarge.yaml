@@ -1,0 +1,36 @@
+seed: 1337
+
+data:
+  sample_rate: 16000
+  clip_samples: 16000
+  train_csv: data/processed/train.csv
+  valid_csv: data/processed/valid.csv
+  test_csv: data/processed/test.csv
+
+feature:
+  n_fft: 640
+  win_length: 640
+  hop_length: 320
+  n_mels: 80
+
+train:
+  batch_size: 256
+  num_workers: 4
+  epochs: 120
+  lr: 0.001
+  weight_decay: 0.0001
+  log_dir: runs/tb/dscnn_xlarge_120ep
+  ckpt_path: runs/checkpoints/dscnn_xlarge_120ep_best.pt
+
+model:
+  num_classes: 12
+  dropout: 0.15
+  channels: [256, 256, 384, 384, 640, 640, 768, 768]
+  block_strides:
+    - [1, 1]
+    - [1, 1]
+    - [2, 2]
+    - [1, 1]
+    - [2, 2]
+    - [1, 1]
+    - [1, 1]
