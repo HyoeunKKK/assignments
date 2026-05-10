@@ -1,0 +1,10 @@
+output_submit/
+output/
+output_final_00_04/
+output_refined_final3_00/
+output_compare*/
+SLP_project01_data/
+*.npy
+__pycache__/
+*.pyc
+.DS_Store
