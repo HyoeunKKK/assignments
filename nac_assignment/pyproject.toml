@@ -1,0 +1,17 @@
+[project]
+name = "nac-assignment"
+version = "0.1.0"
+description = "RVQ-level analysis for a pretrained neural audio codec"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch==2.6.0",
+    "torchaudio==2.6.0",
+    "torchvision==0.21.0",
+    "descript-audio-codec",
+    "openai-whisper",
+    "utmosv2 @ git+https://github.com/sarulab-speech/UTMOSv2.git",
+    "jiwer",
+    "pyarrow",
+    "tqdm",
+]
